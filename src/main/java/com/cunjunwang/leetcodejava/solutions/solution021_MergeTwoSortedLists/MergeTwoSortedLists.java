@@ -1,5 +1,6 @@
 package com.cunjunwang.leetcodejava.solutions.solution021_MergeTwoSortedLists;
 
+import com.cunjunwang.leetcodejava.solutions.CommonObject.LinkedList.ListNode;
 import org.springframework.stereotype.Component;
 
 /**

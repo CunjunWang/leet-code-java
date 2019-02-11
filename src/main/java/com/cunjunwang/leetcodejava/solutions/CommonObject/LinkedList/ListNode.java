@@ -1,4 +1,4 @@
-package com.cunjunwang.leetcodejava.solutions.solution021_MergeTwoSortedLists;
+package com.cunjunwang.leetcodejava.solutions.CommonObject.LinkedList;
 
 import lombok.ToString;
 
@@ -7,11 +7,8 @@ import lombok.ToString;
  */
 @ToString
 public class ListNode {
-
     int val;
-
     ListNode next;
-
     ListNode(int x) {
         val = x;
     }

@@ -1,12 +1,11 @@
 package com.cunjunwang.leetcodejava.solutions.solution021_MergeTwoSortedLists;
 
 import com.cunjunwang.leetcodejava.LeetCodeJavaApplicationTests;
+import com.cunjunwang.leetcodejava.solutions.CommonObject.LinkedList.ListNode;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-
-import static org.junit.Assert.*;
 
 /**
  * Create by cunjunwang on 2019/2/11
@@ -22,14 +21,14 @@ public class MergeTwoSortedListsTest extends LeetCodeJavaApplicationTests {
     public void mergeTwoLists() {
         logger.info("测试开始");
         ListNode l11 = new ListNode(1);
-        ListNode l12 = new ListNode(2);
-        ListNode l13 = new ListNode(4);
+        ListNode l12 = new ListNode(3);
+        ListNode l13 = new ListNode(7);
         l11.next = l12;
         l12.next = l13;
 
-        ListNode l21 = new ListNode(1);
-        ListNode l22 = new ListNode(2);
-        ListNode l23 = new ListNode(4);
+        ListNode l21 = new ListNode(2);
+        ListNode l22 = new ListNode(4);
+        ListNode l23 = new ListNode(5);
         ListNode l24 = new ListNode(6);
         l21.next = l22;
         l22.next = l23;
