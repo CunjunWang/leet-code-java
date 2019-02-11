@@ -21,8 +21,8 @@ public class FindAnagramMappingsTest extends LeetCodeJavaApplicationTests {
     @Test
     public void anagramMappings() {
         logger.info("测试开始");
-        int[] A = {1,2,3};
-        int[] B = {4,5,6};
+        int[] A = {12, 28, 46, 32, 50};
+        int[] B = {50, 12, 32, 46, 28};
         int[] result = findAnagramMappings.anagramMappings(A, B);
         logger.info("测试结束, 结果: {}", result);
     }
