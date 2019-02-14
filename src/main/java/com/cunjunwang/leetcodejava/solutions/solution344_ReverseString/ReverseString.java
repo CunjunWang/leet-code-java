@@ -8,4 +8,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class ReverseString {
 
+    public void reverseString(char[] s) {
+
+    }
+
 }
