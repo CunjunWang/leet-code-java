@@ -29,8 +29,9 @@ public class AddBinary {
      * @param b
      * @return
      */
+    // TODO: implement this
     public String addBinary(String a, String b) {
-        return BigInteger.toBinaryString(Integer.parseInt(a, 2) + Integer.parseInt(b, 2));
+        return null;
     }
 
 }
