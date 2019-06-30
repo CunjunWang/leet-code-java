@@ -1,4 +1,4 @@
-package com.cunjunwang.leetcodejava.solutions.solution28_ImplementStrStr;
+package com.cunjunwang.leetcodejava.solutions.solution028_ImplementStrStr;
 
 import org.springframework.stereotype.Component;
 

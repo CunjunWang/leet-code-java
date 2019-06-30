@@ -1,6 +1,7 @@
 package com.cunjunwang.leetcodejava.solutions.solution70_ClimbingStairs;
 
 import com.cunjunwang.leetcodejava.LeetCodeJavaApplicationTests;
+import com.cunjunwang.leetcodejava.solutions.solution070_ClimbingStairs.ClimbingStairs;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

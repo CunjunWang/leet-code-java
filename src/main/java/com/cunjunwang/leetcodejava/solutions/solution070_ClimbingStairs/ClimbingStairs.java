@@ -1,4 +1,4 @@
-package com.cunjunwang.leetcodejava.solutions.solution70_ClimbingStairs;
+package com.cunjunwang.leetcodejava.solutions.solution070_ClimbingStairs;
 
 import org.springframework.stereotype.Component;
 
