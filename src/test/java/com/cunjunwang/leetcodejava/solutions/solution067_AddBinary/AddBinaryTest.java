@@ -1,7 +1,6 @@
 package com.cunjunwang.leetcodejava.solutions.solution067_AddBinary;
 
 import com.cunjunwang.leetcodejava.LeetCodeJavaApplicationTests;
-import org.junit.Assert;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,18 +18,28 @@ public class AddBinaryTest extends LeetCodeJavaApplicationTests {
 
     @Test
     public void addBinary() {
-        logger.info("测试开始");
+//        logger.info("测试开始");
 
-        String binary1 = "11";
-        String binary2 = "1";
-        String result1 = addBinary.addBinary(binary1, binary2);
-        Assert.assertEquals("100", result1);
+        String binary1 = "101111";
+        String binary2 = "10";
+        String result = addBinary.addBinary(binary1, binary2);
+        logger.info("result = {}", result);
 
-        String binary3 = "1010";
-        String binary4 = "1011";
-        String result2 = addBinary.addBinary(binary3, binary4);
-        Assert.assertEquals("10101", result2);
-
-        logger.info("测试结束");
+//        binary1 = "1";
+//        binary2 = "111";
+//        result = addBinary.addBinary(binary1, binary2);
+//        logger.info("result = {}", result);
+//
+//        binary1 = "11";
+//        binary2 = "1";
+//        result = addBinary.addBinary(binary1, binary2);
+//        logger.info("result = {}", result);
+//
+//        binary1 = "1010";
+//        binary2 = "1011";
+//        result = addBinary.addBinary(binary1, binary2);
+//        logger.info("result = {}", result);
+//
+//        logger.info("测试结束");
     }
 }
