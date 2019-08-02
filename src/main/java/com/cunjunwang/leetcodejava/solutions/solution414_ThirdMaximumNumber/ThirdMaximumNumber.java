@@ -1,11 +1,14 @@
 package com.cunjunwang.leetcodejava.solutions.solution414_ThirdMaximumNumber;
 
-import java.util.HashMap;
-import java.util.Map;
+import org.springframework.stereotype.Component;
+
+import java.util.Comparator;
+import java.util.PriorityQueue;
 
 /**
  * Created by CunjunWang on 2019-07-18.
  */
+@Component
 public class ThirdMaximumNumber {
 
     /**
@@ -32,22 +35,32 @@ public class ThirdMaximumNumber {
      * @param nums
      * @return
      */
-    // TODO:
     public int thirdMax(int[] nums) {
-        Map<Integer, Integer> collect = new HashMap<>();
-        for (int i = 0; i < nums.length; i++) {
-            if (collect.get(i) == null) {
-                collect.put(i, 1);
-            } else {
-                int count = collect.get(i);
-                collect.put(i, ++count);
+        PriorityQueue<Integer> priorityQueue = new PriorityQueue<>(
+                new Comparator<Integer>() {
+                    @Override
+                    public int compare(Integer a, Integer b) {
+                        if (a > b) {
+                            return -1;
+                        } else if (a.equals(b)) {
+                            return 0;
+                        } else {
+                            return 1;
+                        }
+                    }
+                }
+        );
+        for (int num : nums) {
+            if (!priorityQueue.contains(num)) {
+                priorityQueue.add(num);
             }
         }
-
-        int numberOfKey = collect.keySet().size();
-        if (numberOfKey < 3) {
-
+        if (priorityQueue.size() <= 2) {
+            return priorityQueue.peek();
         }
-        return 0;
+        for (int i = 0; i < 2; i++) {
+            priorityQueue.remove(priorityQueue.peek());
+        }
+        return priorityQueue.peek();
     }
 }
