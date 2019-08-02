@@ -1,11 +1,14 @@
 package com.cunjunwang.leetcodejava.solutions.solution189_RotateArray;
 
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by CunjunWang on 2019-08-02.
  */
+@Component
 public class RotateArray {
 
     /**
