@@ -1,12 +1,10 @@
-package com.cunjunwang.leetcodejava.solutions.solution001_TwoSum;
+package com.cunjunwang.leetcodejava.solutions.solution0001_TwoSum;
 
 import com.cunjunwang.leetcodejava.LeetCodeJavaApplicationTests;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-
-import static org.junit.Assert.*;
 
 /**
  * Create by cunjunwang on 2019/2/12

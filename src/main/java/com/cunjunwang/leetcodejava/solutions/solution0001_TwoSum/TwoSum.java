@@ -1,4 +1,4 @@
-package com.cunjunwang.leetcodejava.solutions.solution001_TwoSum;
+package com.cunjunwang.leetcodejava.solutions.solution0001_TwoSum;
 
 import org.springframework.stereotype.Component;
 
