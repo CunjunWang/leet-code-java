@@ -1,6 +1,7 @@
 package com.cunjunwang.leetcodejava.solutions.solution438_FindAllAnagramsInAString;
 
 import com.cunjunwang.leetcodejava.LeetCodeJavaApplicationTests;
+import com.cunjunwang.leetcodejava.solutions.solution0438_FindAllAnagramsInAString.FindAllAnagramsInAString;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
