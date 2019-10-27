@@ -55,30 +55,45 @@ public class StringCompression {
      * @return
      */
     public int compress(char[] chars) {
-        Arrays.sort(chars);
-        Map<Character, Integer> collection = new HashMap<>();
+        int count = 1;
+        if (chars.length == 1) {
+            return count;
+        }
+
+        // Arrays.sort(chars);
+
+        List<Character> list = new ArrayList<>();
         for (int i = 0; i < chars.length; i++) {
-            Character character = chars[i];
-            if (collection.get(character) == null) {
-                collection.put(character, 1);
+            if (i != chars.length - 1) {
+                if (chars[i + 1] == chars[i]) {
+                    count++;
+                } else {
+                    if (count == 1) {
+                        list.add(chars[i]);
+                    } else {
+                        list.add(chars[i]);
+                        for (char c : String.valueOf(count).toCharArray()) {
+                            list.add(c);
+                        }
+                    }
+                    count = 1;
+                }
             } else {
-                int count = collection.get(character);
-                count = count + 1;
-                collection.put(character, count);
+                list.add(chars[i]);
+                if (chars[i] == chars[i - 1]) {
+                    for (char c : String.valueOf(count).toCharArray()) {
+                        list.add(c);
+                    }
+                }
             }
         }
-        int result = 0;
-        Set<Character> keys = collection.keySet();
-        Iterator<Character> keysIterator = keys.iterator();
-        while (keysIterator.hasNext()) {
-            Character next = keysIterator.next();
-            result += next.toString().length();
-            int charLen = collection.get(next);
-            if (charLen != 1) {
-                result += String.valueOf(charLen).length();
-            }
+
+        for (int i = 0; i < list.size(); i++) {
+            chars[i] = list.get(i);
         }
-        return result;
+
+        return list.size();
+
     }
 
 }

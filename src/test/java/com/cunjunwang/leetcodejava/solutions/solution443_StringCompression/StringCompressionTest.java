@@ -20,8 +20,8 @@ public class StringCompressionTest extends LeetCodeJavaApplicationTests {
 
     @Test
     public void compress() {
-        char[] chars1 = new char[]{'a'};
-        logger.info("chars1 = {}, result = {}", chars1, stringCompression.compress(chars1));
+//        char[] chars1 = new char[]{'a'};
+//        logger.info("chars1 = {}, result = {}", chars1, stringCompression.compress(chars1));
         char[] chars2 = new char[]{'a','a','b','b','c','c','c'};
         logger.info("chars2 = {}, result = {}", chars2, stringCompression.compress(chars2));
     }
