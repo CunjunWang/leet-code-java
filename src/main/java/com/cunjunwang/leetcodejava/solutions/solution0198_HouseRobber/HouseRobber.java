@@ -21,6 +21,6 @@ public class HouseRobber {
             dp[i] = Math.max(nums[i] + dp[i - 2], dp[i - 1]);
         }
 
-        return dp[nums.length - 1]
+        return dp[nums.length - 1];
     }
 }
