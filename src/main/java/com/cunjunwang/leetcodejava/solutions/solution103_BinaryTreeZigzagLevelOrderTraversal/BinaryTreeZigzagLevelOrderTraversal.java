@@ -3,10 +3,7 @@ package com.cunjunwang.leetcodejava.solutions.solution103_BinaryTreeZigzagLevelO
 import com.cunjunwang.leetcodejava.solutions.CommonObject.BinaryTree.TreeNode;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 /**
  * Created by CunjunWang on 2019-08-07.
@@ -37,33 +34,41 @@ public class BinaryTreeZigzagLevelOrderTraversal {
      * @return
      */
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
-        List<List<Integer>> list = new ArrayList<>();
-        if (root == null) return list;
+        // tree level order traversal
+        List<List<Integer>> res = new ArrayList<>();
 
-        Queue<TreeNode> queue = new LinkedList<>();
-        queue.add(root);
+        if (root == null)
+            return res;
+
         int level = 0;
-        while (!queue.isEmpty()) {
-            int size = queue.size();
+        Queue<TreeNode> todo = new LinkedList<>();
+        todo.offer(root);
+
+        while (!todo.isEmpty()) {
             List<Integer> innerList = new ArrayList<>();
+            int size = todo.size();
+
             for (int i = 0; i < size; i++) {
-                TreeNode node = queue.remove();
-                innerList.add(node.val);
-                if (node.left != null) queue.add(node.left);
-                if (node.right != null) queue.add(node.right);
-            }
-            if (level % 2 == 0) {
-                list.add(innerList);
-            } else {
-                List<Integer> reverse = new ArrayList<>();
-                for (int i = innerList.size() - 1; i >= 0; i--) {
-                    reverse.add(innerList.get(i));
+                TreeNode cur = todo.poll();
+                innerList.add(cur.val);
+                if (cur.left != null) {
+                    todo.offer(cur.left);
                 }
-                list.add(reverse);
+                if (cur.right != null) {
+                    todo.offer(cur.right);
+                }
+            }
+
+            if (level % 2 == 0) {
+                res.add(innerList);
+            } else {
+                Collections.reverse(innerList);
+                res.add(innerList);
             }
             level++;
         }
-        return list;
+
+        return res;
     }
 
 }
