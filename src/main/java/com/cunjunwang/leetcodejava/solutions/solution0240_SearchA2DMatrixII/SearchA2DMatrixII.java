@@ -34,25 +34,17 @@ public class SearchA2DMatrixII {
         int n = matrix[0].length;
         if (n == 0) return false;
 
-        int startR = m - 1, startC = 0;
-        int val = matrix[startR][startC];
-        while (startR >= 0 && startC < n) {
-            if (target == val) {
+        int row = 0, col = n - 1;
+        while (row < m && col >= 0) {
+            if (matrix[row][col] == target) {
                 return true;
-            } else if (target < val) {
-                startR--;
-                if (startR < 0) {
-                    return false;
-                }
-                val = matrix[startR][startC];
+            } else if (matrix[row][col] < target) {
+                row++;
             } else {
-                startC++;
-                if (startC >= n) {
-                    return false;
-                }
-                val = matrix[startR][startC];
+                col--;
             }
         }
+
         return false;
     }
 
